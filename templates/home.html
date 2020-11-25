@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+	<head>
+		<title>My First Blog Page</title>
+	</head>
+	<body>
+		<h1>All blogs</h1>
+		<p> Welcome back to our blog page</p>
+		<p>PFB the list of blog posted for today</p>
+		{% block content %}
+			{% for blog in object_list %}
+				<div>
+					<h1><a href=''>{{ blog.title }}</a></h1>
+					<p>{{blog.body }}</p>
+				</div>
+			{% endfor %}
+		{% endblock content %}
+		
+	</body>
+</html>
